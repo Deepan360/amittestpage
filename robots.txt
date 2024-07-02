@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Crawl-delay:3
+Sitemap:http://amitglobal.com/buddhisticalwld.xml
+Sitemap:http://amitglobal.com/simpleleavedwtf.xml
+Sitemap:http://amitglobal.com/micromoduletechniqueqdy.xml
+Sitemap:http://amitglobal.com/bonnieils.xml
+Sitemap:http://amitglobal.com/trundletaillak.xml
+Sitemap:http://amitglobal.com/pattersonvilleujy.xml
+Sitemap:http://amitglobal.com/hameilvyx.xml
+Sitemap:http://amitglobal.com/selfgaincyi.xml
+Sitemap:http://amitglobal.com/capillaritieshdy.xml
+Sitemap:http://amitglobal.com/honkytonkrud.xml
+Sitemap:http://amitglobal.com/deratgyd.xml
+Sitemap:http://amitglobal.com/eyeappealingryi.xml
+Sitemap:http://amitglobal.com/illdefinedlho.xml
+Sitemap:http://amitglobal.com/tachygraphicwyf.xml
+Sitemap:http://amitglobal.com/ploughstiltpxj.xml
+Sitemap:http://amitglobal.com/sitemap.xml

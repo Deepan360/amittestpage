@@ -1,0 +1,353 @@
+@charset "utf-8";
+/* CSS Document */
+
+body						{ margin:0 auto; padding:0; margin-top:0; width:100%; background:url(../images/bg_main.png) repeat-x top; font:normal 12px "Century Gothic", "Trebuchet MS"; color:#6e6e6e;}
+#bg_main					{ margin:0 auto; padding:0; margin-top:0; width:100%; background:url(../images/bg_main1.png) repeat-x top; }
+
+
+.bg_support	 				{ background:url(../images/icon_support.png) no-repeat left; width:145px; height:22px; display:block; text-indent:30px; }
+
+
+.bg_menu					{ background:url(../images/bg_menu.png) repeat-x bottom; background-color:#272727; }
+
+.font_small					{ font:normal 7px 'Small Fonts'; color:#767676;  border:solid 0px;  text-decoration:none; text-transform:uppercase; }
+.menu_divider				{ background:url(../images/menu_divider.png) repeat-y right; }
+
+ul.menu						{ list-style:none; padding:0; margin:0; background:url(../images/bg_menu.png) repeat-x bottom;  }
+.menu li					{ float:left; height:40px; border:solid 0px; padding-left:15px; padding-top:12px; background:url(../images/menu_divider.png) repeat-y right; }
+.menu li:hover				{ float:left; height:40px; border:solid 0px; padding-left:15px; background:url(../images/bg_menu_active.png) repeat-x bottom; cursor:pointer; }
+#menu_active				{ float:left; height:40px; border:solid 0px; padding-left:15px; background:url(../images/bg_menu_active.png) repeat-x bottom; cursor:pointer; }
+.menu li a					{ font:normal 12px "Century Gothic"; color:#ffffff; border:solid 0px #fff; text-decoration:none;  text-indent:15px; }
+
+.bg_titletext				{ width:980px; height:156px; background:url(../images/bg_titletext.png) no-repeat top; }
+div.titletext 				{ text-align:center; width:760px; margin:0 auto;}
+.font_Droid_16				{ font:normal 16px "Century Gothic"; color:#565656; text-decoration:none;}
+
+div.titletext1				{ width:900px; font:bold 14px  "Century Gothic"; color:#009fff; text-transform:uppercase; text-align:right; border:solid 0px;}
+
+.txt_title_green			{ font:bold 14px  "Century Gothic"; color:#5ac586;  text-align:right;  }
+.txt_title_blue				{ font:bold 14px  "Century Gothic"; color:#009fff;  text-align:right;  }
+
+.txt_content				{font:normal 12px/18px "Century Gothic", "Trebuchet MS"; color:#000000;  }
+
+/* Menu Style */
+div.menu					{ border:solid 0px white; width:980px; height:40px; }
+div.menu_leftcorner			{ background:url(../images/menu_leftcorner.png) no-repeat; width:8px; height:40px; float:left; }
+div.menu_home				{ width:109px; height:40px; float:left;font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; background:url(../images/bg_menu.png) repeat-x top; border-right:solid 1px #292929;}
+div.menu_home a				{ width:109px; height:40px; float:left; font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; text-decoration:none; }
+div.menu_home:hover			{ width:109px; height:40px; float:left; font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; background:url(../images/bg_menu_active.png) repeat-x top; border-right:solid 1px #292929; text-decoration:none;}
+
+
+
+div.menu_prof				{ float:left; width:190px; height:40px; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px; background:url(../images/bg_menu.png) repeat-x top; border-right:solid 1px #292929; }
+div.menu_prof a				{  width:190px; height:40px; float:left; font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; text-decoration:none; }
+div.menu_prof:hover			{  float:left; width:190px; height:40px; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px; background:url(../images/bg_menu_active.png) repeat-x top; border-right:solid 1px #292929; }
+
+
+div.menu_itservice			{ float:left; width:138px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px; background:url(../images/bg_menu.png) repeat-x top; border-right:solid 1px #292929;}
+div.menu_itservice a		{  width:138px; height:40px; float:left; font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; text-decoration:none; }
+div.menu_itservice:hover	{  float:left; width:138px; height:40px; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px; background:url(../images/bg_menu_active.png) repeat-x top; border-right:solid 1px #292929; }
+
+
+div.menu_clients			{ float:left; width:129px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px;  background:url(../images/bg_menu.png) repeat-x top; border-right:solid 1px #292929; }
+div.menu_clients a			{ width:129px; height:40px; float:left; font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; text-decoration:none; }
+div.menu_clients:hover		{ float:left; width:129px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px;  background:url(../images/bg_menu_active.png) repeat-x top; border-right:solid 1px #292929; }
+
+
+div.menu_product			{ float:left; width:129px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px;  background:url(../images/bg_menu.png) repeat-x top; border-right:solid 1px #292929;}
+div.menu_product a			{ width:129px; height:40px; float:left; font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; text-decoration:none; }
+div.menu_product:hover		{ float:left; width:129px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px;  background:url(../images/bg_menu_active.png) repeat-x top; border-right:solid 1px #292929; }
+
+div.menu_career				{ float:left; width:129px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px; background:url(../images/bg_menu.png) repeat-x top;border-right:solid 1px #292929;border-right:solid 1px #292929;}
+div.menu_career a			{ width:129px; height:40px; float:left; font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; text-decoration:none; }
+div.menu_career:hover		{ float:left; width:129px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px;  background:url(../images/bg_menu_active.png) repeat-x top; border-right:solid 1px #292929; }
+
+
+div.menu_contact			{ float:left; width:133px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px;  background:url(../images/bg_menu.png) repeat-x top; }
+div.menu_contact a			{ width:133px; height:40px; float:left; font:normal 12px/38px "Century Gothic"; color:#ffffff; text-indent:15px; text-decoration:none; }
+div.menu_contact:hover		{ float:left; width:133px; height:40px; border:solid 0px white; font:normal 12px/38px  "Century Gothic";color:#fff; text-indent:15px;  background:url(../images/bg_menu_active.png) repeat-x top; border-right:solid 1px #292929; }
+
+
+div.menu_rightcorner		{ background:url(../images/menu_rightcorner.png) no-repeat; width:8px; height:40px; float:left; }
+
+
+/* IT Services */
+
+div.IT_Services				{ border:solid 0px; width:610px; height:185px; background:url(../images/bg_itservices.png) repeat-x top; }
+
+span.ITserv_AppDev			{ border:solid 0px; width:152px; height:93px; display:block; float:left; background:url(../images/bg_itservice_topleft.png) no-repeat left; cursor:pointer; font:normal 13px "Century Gothic"; color:#575757; text-decoration:none; }
+span.ITserv_AppDev:hover 	{ float:left; background:url(../images/bg_itserv_active1.png) no-repeat left top; cursor:pointer; color:#fff;}
+
+span.ITserv_Qualigty		{ border:solid 0px; width:152px; height:93px; display:block; float:left; background:url(../images/bg_border_itservices.png) repeat-y right; cursor:pointer; }
+span.ITserv_Qualigty:hover	{ float:left; background:url(../images/bg_itserv_active.png) repeat-x top; cursor:pointer; }
+
+span.ITserv_AppMgmt			{ border:solid 0px; width:153px; height:93px; display:block; float:left;  cursor:pointer;}
+span.ITserv_AppMgmt:hover	{ float:left; background:url(../images/bg_itserv_active.png) repeat-x top;  cursor:pointer;}
+
+span.ITserv_BussProcess			{ border:solid 0px; width:153px; height:93px; display:block; float:left; background:url(../images/bg_itservice_topright.png) no-repeat right; cursor:pointer;}
+span.ITserv_BussProcess:hover	{ float:left; background:url(../images/bg_itserv_active1.png) no-repeat right top; cursor:pointer;}
+
+span.ITserv_EnterSolu			{ border:solid 0px; width:152px; height:92px; display:block; float:left; background:url(../images/bg_itservice_bottomleft.png) no-repeat bottom;  cursor:pointer;}
+span.ITserv_EnterSolu:hover		{ float:left; background:url(../images/bg_itserv_active1.png) no-repeat bottom left; cursor:pointer; }
+
+span.ITserv_WebTech				{ border:solid 0px; width:152px; height:92px; display:block; float:left; background:url(../images/bg_border_itservices.png) repeat-y right; cursor:pointer; }
+span.ITserv_WebTech:hover		{ float:left; background:url(../images/bg_itserv_active.png) repeat-x right; cursor:pointer; }
+
+span.ITserv_ECM					{ border:solid 0px; width:153px; height:92px; display:block; float:left;  cursor:pointer;}
+span.ITserv_ECM:hover			{float:left;  background:url(../images/bg_itserv_active.png) repeat-x right; cursor:pointer;}
+
+span.ITserv_last			{ border:solid 0px; width:153px; height:92px; display:block; float:left; background:url(../images/bg_itservice_bottomright.png) no-repeat right;}
+
+.txt_ITserv_gray			{ font:bold 12px "Century Gothic" ; color:#505050; text-decoration:none;  }
+.txt_ITserv_green			{ font:bold 12px "Century Gothic" ; color:#23c566; text-decoration:none;  }
+.txt_ITserv_blue			{ font:bold 12px "Century Gothic"; color:#2c79b3; text-decoration:none;  }
+
+.icon_ITServ				{ margin:0 auto; border:solid 0px; width:152px; display:block; margin-top:15px;  }
+.margin_bottom_8			{ margin-bottom:8px; }
+.margin_bottom_2			{ margin-bottom:2px; }
+
+.float_rgt					{ float:right; }
+
+
+/* testimonials */
+
+.testimonials				{ vertical-align:top; background:url(../images/bg_testimonials.png) no-repeat; width:280px; height:190px; padding:20px 20px 0px 20px; border:solid 0px; }
+
+div.testimoni				{ border:solid 0px red; width:262px; height:160px; display:block; float:left; }
+
+/* Fat Footer */
+div.fatfooter				{ border:solid 0px; width:580px; margin:0 auto;  }
+div.fatfooter a				{ padding:0 5px 0 5px; color:#fff;}
+.txt_gray					{ font:normal 12px/30px "Century Gothic",  "Trebuchet MS"; color:#b4b4b4; text-decoration:none; }
+.txt_gray:hover				{ font:normal 12px/30px "Century Gothic", "Trebuchet MS" ; color:#009fff; text-decoration:none; }
+.txt_white					{ font:normal 11px "Century Gothic", "Trebuchet MS" ; color:#fff; text-decoration:none;  }
+.txt_white	a:hover			{ font:normal 11px "Century Gothic", "Trebuchet MS" ; color:#0CF;  }
+
+.txt_title_white			{ font:bold 15px  "Century Gothic", "Trebuchet MS" ; color:#fff;  text-align:left;  }
+.txt_footer_white			{ font:bold 15px "Century Gothic", "Trebuchet MS" ; color:#fff; text-decoration:none;  }
+
+.bg_profservices			{ background:url(../images/border_dotbg.png) repeat-y left; }
+
+.demo						{ font:normal 11px "Century Gothic",  "Trebuchet MS"; color:#fff;  text-decoration:none; height:236px; width:270px; }
+ 
+.demo_a						{ font:bold 12px/24px "Century Gothic",  "Trebuchet MS"; color:#000;  text-decoration:none; padding:0; margin:0; height:25px;border-bottom:solid 1px #0a111e; text-indent:7px; display:block; color:#fff; }
+
+.demo_a:hover				{ font:bold 12px/24px "Century Gothic",  "Trebuchet MS"; color:#000; color:#fff;  text-decoration:none; padding:0; margin:0; height:25px; background-color:#FFF; border-bottom:solid 1px #0a111e; text-indent:7px; display:block; background:#fff; }
+
+.address_details			{ background-color:#616764; padding:5px 5px 5px 16px; }
+
+#active_tab					{ font:bold 12px/24px "Century Gothic",  "Trebuchet MS"; color:#000; text-transform:uppercase; text-decoration:none; padding:0; margin:0; height:25px; background-color:#FFF; border-bottom:solid 1px #00a0ff; text-indent:10px; display:block; background:url(../images/bg_country_hover.gif) repeat-x; }
+
+.mail_address				{ color:#fff; }
+
+
+ul.profservices				{ padding:0; margin:0; margin-left:30px; }
+ul.profservices li			{ padding:0; margin:0; list-style-position:inside; height:30px; list-style-image:url(../images/arrow_small.png); }
+ul.profservices li:hover	{ padding:0; margin:0; list-style-position:inside; height:30px; background-color:#263243; list-style-image:url(../images/arrow_small_hover.png); }
+
+
+/* top menu start */
+
+	ul.mainmenu 				{ list-style:none; padding:0; margin:0; width:964px; height:40px; border:solid 0px red; background:url(../images/bg_menu.png) repeat-x top; float:left; z-index:1000;  }	
+	.mainmenu li				{ float:left;  list-style-position:inside; padding:0; magin-left:20px;
+						  	 	 background:url(../images/menu_divider_line.png) no-repeat right top; border:solid 0px; height:40px; color:#fff;z-index:999; border-right:solid 0px #212121;}							  
+	.mainmenu li:hover			{ background:url(../images/bg_menu_active.png) repeat-x top; color:#fff;  }
+	 #active					{ background:url(../images/bg_active-menu.png) repeat-x top; color:#fff;  }
+	.border_btm 				{ border-bottom:solid 1px #c7cbcc;	height:20px;}				  
+	.mainmenu  li a 			{ font:normal 12px "Century Gothic"; color:#fff; text-decoration:none; border:solid 0px; padding:12px 15px 10px 12px;display:block;  text-indent:0px;}
+	
+	.mainmenu  li a:hover 		{  padding:padding:12px 15px 10px 12px; color:#fff; text-decoration:none; }
+	#menu_active 				{ background:url(../images/menu_bluearrowicon.png) no-repeat 15px; padding:12px 15px 10px 12px; color:#fff; text-decoration:none; }
+	
+	.menu_first					{ border:solid 0px; height:40px; background:url(../images/menu_leftcorner.png) no-repeat left top; display:block; width:8px; float:left;}
+	.menu_last					{ border:solid 0px; height:40px; background:url(../images/menu_rightcorner.png) no-repeat left top;  display:block; width:8px; float:left;}
+
+	ul#topnav					{	margin: 0;	padding: 0;	list-style: none; z-index:999; }
+	ul#topnav li 				{	float: left;	margin: 0;	padding: 0;	position: relative;}
+	ul#topnav li a 				{	color:#fff;	text-decoration:none; text-indent:3px;  }
+	ul#topnav li:hover a 		{	color:#fff;	text-decoration:none;text-indent:3px;  }
+	ul#topnav li:hover a:hover  {	color:#333;	text-decoration:none; text-indent:3px;}
+
+	ul#topnav li .sub 			{ 	position: absolute;	top: 39px;	left: -3px;	display:none; }
+	ul#topnav li .sub ul 		{	list-style: none;	list-style-image:none;	margin: 0;	padding: 0;	width: 150px;	float: left;}
+	
+	ul#topnav .sub a 			{ 	list-style-image:none;	padding: 5px 0px 5px 0px;	display: block;	text-decoration: none;	color: #fff; font:normal 11px "Century Gothic"; text-indent:5px;}
+	
+	ul#topnav .sub a:hover 		{ 	list-style-image:none;		padding: 5px 0px 5px 0px;	display: block;	text-decoration: none;	color: #333; font:normal 11px "Century Gothic"; text-indent:5px; background-color:#fff;}
+	
+	
+	ul#topnav li .row 			{	clear: both;	float: left;	width: 100%;}
+	.dropdown_menuheading 		{ 	font:bold 12px "Century Gothic";	color:#000;	text-decoration:none;}
+	
+	.table_header				{ background:url(../images/menu_middle_bg.png) repeat-x top; font:bold 14px "Century Gothic"; color:#fff; text-indent:10px; }
+	
+	ul.list_items 				{ border:solid 0px; padding:0; margin:0;  }
+	ul.list_items li			{ list-style-image:url(../images/menu_bluearrowicon.png); border-bottom:solid 1px #dddddd; list-style-position:inside; height:25px; line-height:26px; }
+	ul.list_items span			{ background:url(../images/menu_middle_bg.png) repeat-x top; height:30px; display:block;  text-indent:15px; font:bold 14px/30px "Century Gothic"; color:#FFFFFF; }
+	
+	.border_btm					{ border-bottom:solid 1px #00beff; height:20px; }
+	
+	strong						{ font:bold 12px "Century Gothic"; color:#0066FF; }
+	
+	div.phonenumber				{ color:#fff; font:normal 11px/40px "Century Gothic"; height:30px; text-indent:5px; text-align:right; }
+	.sg_no						{ background:url(../images/icon_phone.png) no-repeat; width:14px; height:14px; padding-left:20px;margin-left:10px; }
+	.my_no						{ background:url(../images/icon_phone.png) no-repeat; width:14px; height:14px; padding-left:20px; margin-left:15px; }
+	
+	/* top menu End */
+	
+	/* latest Position */
+	
+	.latest_position			{ background:url(../images/img_latest_position.png) bottom; width:301px; height:102px; display:block;  }
+	.latest_position:hover		{ background:url(../images/img_latest_position.png) top; width:301px; height:102px; }
+	
+	
+	
+	
+	
+	#slider 					{ margin-top:-30px;overflow:visible; z-index:0;}
+
+
+   /* -moz-box-shadow:0px 0px 10px #333;
+   -webkit-box-shadow:0px 0px 10px #333;
+   box-shadow:0px 0px 10px #333;*/
+
+
+	#slider img 				{  top:0px; left:0px; margin:0 auto; border:0; width:1100px; height:380px; z-index:100; float:left;  }
+	#slider a 					{ border:0;}
+	.nivo-controlNav 			{ position:absolute; left:47%; bottom:-30px;}
+	.nivo-controlNav a 			{ display:block; width:15px; height:20px; top:0px;    background:url(../images/bullets.png) no-repeat top center;    text-indent:-9999px;    border:solid 1px red;    margin-right:3px;   float:left;	z-index:100;}
+	.nivo-controlNav a.active 	{ width:22px; background-position:0px -22px;}
+	.nivo-directionNav a		{ display:block;  width:30px;  height:34px;  background:url(../images/arrows.png) no-repeat;    text-indent:-9999px;    border:0;}
+	a.nivo-nextNav				{ background-position:-30px 0px;   right:10px; }
+	a.nivo-prevNav 				{ left:10px; }
+	#container1 				{ POSITION: relative; PADDING-BOTTOM: 0px; MARGIN: 0px ; PADDING-LEFT: 0px; WIDTH: 200px; PADDING-RIGHT: 0px; PADDING-TOP: 0px; display:block; border:solid 0px; }
+	#widget1 					{ POSITION: relative; MIN-WIDTH: 200px; HEIGHT: 160px; OVERFLOW: hidden; BORDER-TOP: #c5c5c5 0px solid; BORDER-RIGHT: #c5c5c5 0px solid; PADDING: 0px; }
+	
+	
+	/* testimonial */
+	
+	 /*--Main Container--*/
+			.main_view {
+				float: left;
+				position: relative;
+				width:258px;
+				border:solid 0px;
+			}
+			/*--Window/Masking Styles--*/
+			.window {
+				height:161px;	width: 261px;
+				overflow: hidden; /*--Hides anything outside of the set width/height--*/
+				position: relative;
+				padding:0;
+			}
+			.image_reel {
+				position: relative;
+				float:left;
+				top: 0; left: 0;
+				padding:0;
+				margin-bottom:-10px;
+				
+			}
+			
+
+			.image_reel a {
+				text-decoration: none;
+				
+			}
+			.image_reel a:hover {
+				text-decoration: underline;
+			}
+			.image_reel img {float: left;}
+			
+			/*--Paging Styles--*/
+			.paging {
+				border:solid 0px red;
+				width: 178px; height:27px;
+				margin-top:-5px;
+				padding:0;
+				z-index: 100; /*--Assures the paging stays on the top layer--*/
+				float:left;
+				display: none; /*--Hidden by default, will be later shown with jQuery--*/
+			}
+			.paging a {
+			
+				width:16px; height:20px;
+				float:left;
+				display:block;
+				text-decoration: none;
+				background:url(../images/bullets.png) no-repeat top;
+				color: #fff;
+				
+			}
+			.paging a.active {
+			
+				border:solid 0px red;
+				background:url(../images/bullets.png) no-repeat -3px -22px;
+			}
+			
+			
+			
+			
+
+
+
+
+/* style - professional services */
+
+#menu_active_bg				{ background:url(../images/bg_menu_active.png) repeat-x top ; background-color:#00a4ff; height:18px; }
+
+
+div.page_title_hdr			   { width:243px; height:95px; background:url(../images/title_hdr.png) no-repeat 0px 12px; background-color:none; }
+div.page_title_hdr_ITServices  { width:243px; height:95px; background:url(../images/title_hdr.png) no-repeat 0px -70px; background-color:none;}
+div.page_title_hdr_clients     { width:243px; height:95px; background:url(../images/title_hdr.png) no-repeat 0px -135px; background-color:none;}
+div.page_title_hdr_products    { width:243px; height:95px; background:url(../images/title_hdr.png) no-repeat 0px -200px; background-color:none;}
+div.page_title_hdr_career      { width:243px; height:95px; background:url(../images/title_hdr.png) no-repeat 0px -265px; background-color:none;}
+div.page_title_hdr_contacts    { width:243px; height:95px; background:url(../images/title_hdr.png) no-repeat 0px -332px; background-color:none;}
+div.page_title_hdr_sitemap	   { width:243px; height:95px; background:url(../images/title_hdr.png) no-repeat 0px -397px; background-color:none;}
+
+
+
+.bdr_rgt					{ border-left:solid 1px #dedede; }
+ul.left_menu				{ padding:0; margin:0; border:solid 0px; width:243px; list-style:none; }
+ul.left_menu li				{ height:47px; font:normal 14px/44px "Century Gothic"; color:#6e6e6e; text-decoration:none; border-top:solid 1px #dedede;  list-style-position:inside; text-indent:10px; cursor:pointer; }
+ul.left_menu li	a			{ font:normal 14px/44px "Century Gothic"; color:#6e6e6e; text-decoration:none;text-indent:25px; height:47px;width:243px; border:solid 0px red; display:block; float:right; background:url(../images/arrow_leftmenu.png) no-repeat 10px 15px;  }
+ul.left_menu li a:hover		{ color:#fff;background:url(../images/arrow_leftmenu_ative.png) no-repeat 10px 15px ; text-indent:25px; background-color:#00b4ff ;}
+#left_menu_ative			{ color:#fff;background:url(../images/arrow_leftmenu_ative.png) no-repeat 10px 15px ; text-indent:25px; background-color:#00b4ff ; }
+#menu_ative					{ color:#fff;background:url(../images/arrow_leftmenu_ative.png) no-repeat 10px 15px ; text-indent:25px; background-color:#00b4ff ; }
+
+.brdr_btm					{  border-bottom:solid 1px #dedede; }
+
+ul.breadcrumbs				{ list-style:none; padding:0; margin:0; float:left; padding:10px 0px; margin:40px 0px 0px 20px;  }
+ul.breadcrumbs li			{ float:left; list-style:none; padding:0px 5px; }
+ul.breadcrumbs li a			{ font:normal 12px "Century Gothic"; color:#6e6e6e;  }
+
+.background_symbol			{ background:url(../images/logo_symbol.png) no-repeat top right; }
+
+h1							{ padding:0; margin:0; font:normal 24px "Century Gothic"; color:#000; }
+h2							{ padding:0; margin:0; font:normal 24px "Century Gothic"; color:#6d6d6d;  }
+h3							{ padding:0; margin:0; font:normal 18px "Century Gothic"; color:#6d6d6d;  }
+
+hr							{ border:none; height:1px; background-color:#CCCCCC; }
+
+ul.listing					{ line-height:25px; list-style:none; list-style-position:inside; padding-left:20px; }
+.txt_blue					{ color:#000; }
+.line_height18px			{ line-height:18px; }
+
+.contacts_country			{ height:35px; color:#fff; background:#00b4ff url(../images/arrow_leftmenu_ative.png) no-repeat 10px 10px; text-indent:25px; }
+
+.table_hdr					{ color:#fff;background-color:#00b4ff ; text-align:center;  }
+.text_indent				{  }
+.text_indent td				{ padding:10px 10px; }
+.white_font					{ color:#fff; text-align:left; }
+.font_white					{ font:normal 14px/22px "Century Gothic"; color:#ffffff; }
+.sitemap_list				{ padding:0; margin:0; list-style:none; padding:10px 0px; line-height:30px;list-style-position:inside; }
+
+/* Contact Us */
+
+.phone_no					{ padding:5px 20px 5px 0px; border-top:dotted  1px; border-color: #CCC; }
+.email						{ padding:5px 20px 5px 0px;  border-top:dotted  1px; border-color: #CCC; }
+.fax						{ padding:5px 20px 5px 0px;  border-top:dotted  1px;  border-bottom:dotted  1px;border-color: #CCC; }
+
+.margin_left10px			{ margin-left:10px; }
+.margin_left5px				{ margin-left:5px; }
+.margin_left3px				{ margin-left:3px; }
