@@ -16,6 +16,24 @@
 <noscript>
 <link rel="stylesheet" type="text/css" href="slider_css/noscript.css" />
 </noscript>
+<style>
+  .sub {
+  display: none;
+  position: absolute;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.mainmenu li {
+  position: relative;
+}
+
+.mainmenu li:hover .sub {
+  display: block;
+}
+
+
+
+</style>
 <link href="css/css_style.css" rel="stylesheet" type="text/css" />
 <link href="css/nivo-slider.css" rel="stylesheet" type="text/css" />
 
@@ -343,36 +361,41 @@
   <div class="wrapper">
     <div id="ei-slider" class="ei-slider">
       <ul class="ei-slider-large">
-        <li> <img src="slider_images/large/6.jpg" alt="image06"/>
-            <div class="ei-title">
-              <h3 style="margin-top:20px;">AGS speaks about Technology that  gives better ROI for your business</h3>
-            </div>
+        <li> 
+          <img src="slider_images/large/6.jpg" alt="image06"/>
+          <div class="ei-title">
+            <h3>AGS speaks about Technology that gives better ROI for your business</h3>
+          </div>
         </li>
-        <li> <img src="slider_images/large/1.jpg" alt="image01" />
-            <div class="ei-title">
-              <h3 style="margin-top:20px;">AGS have minds that can choose the best brains in the industry for your needs. </h3>
-            </div>
+        <li> 
+          <img src="slider_images/large/1.jpg" alt="image01" />
+          <div class="ei-title">
+            <h3>AGS have minds that can choose the best brains in the industry for your needs.</h3>
+          </div>
         </li>
-        <li> <img src="slider_images/large/2.jpg" alt="image02" />
-            <div class="ei-title">
-              <h3 style="margin-top:8px;">Strategic disposition, professionalism and commitment makes<br />
-                AGS the preferred IT partner of global players</h3>
-            </div>
+        <li> 
+          <img src="slider_images/large/2.jpg" alt="image02" />
+          <div class="ei-title">
+            <h3>Strategic disposition, professionalism and commitment makes AGS the preferred IT partner of global players</h3>
+          </div>
         </li>
-        <li> <img src="slider_images/large/3.jpg" alt="image03"/>
-            <div class="ei-title">
-              <h3 style="margin-top:20px;">Wide range of products in different verticals makes AGS the unique IT Solutions Provider globally</h3>
-            </div>
+        <li> 
+          <img src="slider_images/large/3.jpg" alt="image03"/>
+          <div class="ei-title">
+            <h3>Wide range of products in different verticals makes AGS the unique IT Solutions Provider globally</h3>
+          </div>
         </li>
-        <li> <img src="slider_images/large/4.jpg" alt="image04"/>
-            <div class="ei-title">
-              <h3 style="margin-top:20px;">We create a career platform for our employees to nurture in a superior conducts</h3>
-            </div>
+        <li> 
+          <img src="slider_images/large/4.jpg" alt="image04"/>
+          <div class="ei-title">
+            <h3>We create a career platform for our employees to nurture in a superior conducts</h3>
+          </div>
         </li>
-        <li> <img src="slider_images/large/5.jpg" alt="image05"/>
-            <div class="ei-title">
-              <h3 style="margin-top:20px;">Friendly customer relations to the best needs of our clients and job seekers.</h3>
-            </div>
+        <li> 
+          <img src="slider_images/large/5.jpg" alt="image05"/>
+          <div class="ei-title">
+            <h3>Friendly customer relations to the best needs of our clients and job seekers.</h3>
+          </div>
         </li>
       </ul>
       <ul class="ei-slider-thumbs">
@@ -387,6 +410,10 @@
     </div>
   </div>
 </div>
+
+
+
+
 <div style="width:980px; height:20px; background:url(images/bg_bannershadow.png) no-repeat top center; margin:11px auto; border:solid 0px;"></div>
 <!-- Content Page Start-->
 <table width="980" border="0" cellspacing="0" cellpadding="0" align="center" style="border-collapse:collapse;" >
@@ -691,72 +718,126 @@
 </table>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script> 
 <script type="text/javascript" src="jquery.hoverIntent.minified.js"></script> 
-<script type="text/javascript">
-$(document).ready(function() {
-	
 
-	function megaHoverOver(){
-		$(this).find(".sub").show();
-			
-		//Calculate width of all ul's
-		(function($) { 
-			jQuery.fn.calcSubWidth = function() {
-				rowWidth = 0;
-				//Calculate row
-				$(this).find("ul").each(function() {					
-					rowWidth += $(this).width(); 
-				});	
-			};
-		})(jQuery); 
-		
-		if ( $(this).find(".row").length > 0 ) { //If row exists...
-			var biggestRow = 0;	
-			//Calculate each row
-			$(this).find(".row").each(function() {							   
-				$(this).calcSubWidth();
-				//Find biggest row
-				if(rowWidth > biggestRow) {
-					biggestRow = rowWidth;
-				}
-			});
-			//Set width
-			$(this).find(".sub").css({'width' :biggestRow});
-			$(this).find(".row:last").css({'margin':'0'});
-			
-		} else { //If row does not exist...
-			
-			$(this).calcSubWidth();
-			//Set Width
-			$(this).find(".sub").css({'width' : rowWidth});
-			
-		}
-	}
-	
-	function megaHoverOut(){ 
-	  $(this).find(".sub").hide();
-	  }
+<script>
+  $(document).ready(function() {
+    var currentSlide = 0;
+    var totalSlides = $('.ei-slider-large li').length;
 
+    // Auto slide function
+    var autoSlide = setInterval(function() {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      slideTo(currentSlide);
+    }, 2000); // Change interval as needed (2000ms = 2 seconds)
 
-	var config = {    
-		 sensitivity: 2, // number = sensitivity threshold (must be 1 or higher)    
-		 interval:0, // number = milliseconds for onMouseOver polling interval    
-		 over: megaHoverOver, // function = onMouseOver callback (REQUIRED)    
-		 timeout: 0, // number = milliseconds delay before onMouseOut    
-		 out: megaHoverOut // function = onMouseOut callback (REQUIRED)    
-	};
+    // Function to navigate to specific slide
+    function slideTo(slideIndex) {
+      $('.ei-slider-large li').removeClass('active');
+      $('.ei-slider-large li').eq(slideIndex).addClass('active');
+      $('.ei-slider-thumbs li').removeClass('active');
+      $('.ei-slider-thumbs li').eq(slideIndex + 1).addClass('active'); // +1 to skip "Current" li
 
-	//$("ul#topnav li .sub").css({'opacity':'0'});
-	$("ul#topnav li").hoverIntent(config);
+      // Scroll thumbs if needed
+      var thumbPosition = $('.ei-slider-thumbs').scrollLeft();
+      var thumbWidth = $('.ei-slider-thumbs').width();
+      var thumbItemWidth = $('.ei-slider-thumbs li').outerWidth(true);
+      var thumbScrollOffset = (slideIndex + 1) * thumbItemWidth - thumbWidth / 2;
 
+      $('.ei-slider-thumbs').animate({
+        scrollLeft: thumbScrollOffset
+      }, 500); // Animation speed for thumb scrolling
+    }
 
+    // Thumbnail click handler
+    $('.ei-slider-thumbs li').click(function() {
+      var slideIndex = $(this).index() - 1;
+      clearInterval(autoSlide); // Stop auto sliding on manual click
+      slideTo(slideIndex);
+    });
 
+    // Reset auto slide on mouseleave
+    $('.ei-slider-thumbs').mouseleave(function() {
+      autoSlide = setInterval(function() {
+        if (currentSlide < totalSlides - 1) {
+          currentSlide++;
+        } else {
+          currentSlide = 0;
+        }
+        slideTo(currentSlide);
+      }, 2000); // Change interval as needed (2000ms = 2 seconds)
+    });
+  });
+</script>
+
+<!-- Include jQuery and jQuery UI libraries -->
+<script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script  type="text/javascript" src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+
+<script  type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.slider');
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const thumbs = Array.from(document.querySelectorAll('.thumb'));
+  const intervalTime = 2000; // Auto slide interval in milliseconds
+  let slideInterval;
+
+  // Function to move to next slide
+  function nextSlide() {
+    const currentSlide = document.querySelector('.slide.active');
+    let currentIndex = slides.indexOf(currentSlide);
+    let nextIndex = (currentIndex + 1) % slides.length;
+
+    // Move slider to next slide
+    slider.style.transform = `translateX(-${nextIndex * 100}%)`;
+
+    // Update active slide and thumb
+    currentSlide.classList.remove('active');
+    slides[nextIndex].classList.add('active');
+
+    // Update active thumbnail
+    thumbs.forEach(thumb => thumb.classList.remove('active'));
+    thumbs[nextIndex].classList.add('active');
+  }
+
+  // Set interval for auto slide
+  function startSlideInterval() {
+    slideInterval = setInterval(nextSlide, intervalTime);
+  }
+
+  // Event listener for clicking on thumbnails
+  thumbs.forEach(thumb => {
+    thumb.addEventListener('click', function() {
+      clearInterval(slideInterval); // Stop auto slide
+
+      const index = parseInt(thumb.getAttribute('data-slide-index'));
+
+      // Move slider to selected slide
+      slider.style.transform = `translateX(-${index * 100}%)`;
+
+      // Update active slide
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+
+      // Update active thumbnail
+      thumbs.forEach(t => t.classList.remove('active'));
+      thumb.classList.add('active');
+
+      // Restart auto slide after 2 seconds
+      setTimeout(startSlideInterval, intervalTime);
+    });
+  });
+
+  // Start auto slide initially
+  startSlideInterval();
 });
-function MM_preloadImages() { //v3.0
-  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-}
-</script> 
+
+
+</script>
+
 <script type="text/javascript">
 $(window).load(function() {
     $('#slider').nivoSlider();

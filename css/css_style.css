@@ -351,3 +351,18 @@ ul.listing					{ line-height:25px; list-style:none; list-style-position:inside; 
 .margin_left10px			{ margin-left:10px; }
 .margin_left5px				{ margin-left:5px; }
 .margin_left3px				{ margin-left:3px; }
+  .sub {
+  	display: none;
+  	position: absolute;
+  	z-index: 1000;
+  	/* Ensure it appears above other content */
+  }
+
+  .mainmenu li {
+  	position: relative;
+  }
+
+  .mainmenu li:hover .sub {
+  	display: block;
+  }
+  
