@@ -12,11 +12,7 @@
 <link rel="stylesheet" type="text/css" href="slider_css/demo.css" />
 <link rel="stylesheet" type="text/css" href="slider_css/style.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
-<style type="text/css">
 
-.style6 {color: #0066FF; font-weight: bold; }
-
-</style>
 <noscript>
 <link rel="stylesheet" type="text/css" href="slider_css/noscript.css" />
 </noscript>
@@ -527,72 +523,7 @@
             <table width="301" border="0" cellspacing="0" cellpadding="0" align="center">
               <tr>
                 <td class="testimonials">
-                  <script>
-            $(document).ready(function() {
-		
-			//Show the paging and activate its first link
-			$(".paging").show();
-			$(".paging a:first").addClass("active");
-			
-			//Get size of the image, how many images there are, then determin the size of the image reel.
-			var imageWidth = $(".window").width();
-			var imageSum = $(".image_reel img").size();
-			var imageReelWidth = imageWidth * imageSum;
-			
-			//Adjust the image reel to its new size
-			$(".image_reel").css({'width' : imageReelWidth});
-			
-			
-			//Paging  and Slider Function
-			rotate = function(){
-				var triggerID = $active.attr("rel") - 1; //Get number of times to slide
-				var image_reelPosition = triggerID * imageWidth; //Determines the distance the image reel needs to slide
-			
-				$(".paging a").removeClass('active'); //Remove all active class
-				$active.addClass('active'); //Add active class (the $active is declared in the rotateSwitch function)
-			
-				//Slider Animation
-				$(".image_reel").animate({
-					left: -image_reelPosition
-				}, 500 );
-			
-			}; 
-			
-			//Rotation  and Timing Event
-			rotateSwitch = function(){
-				play = setInterval(function(){ //Set timer - this will repeat itself every 7 seconds
-					$active = $('.paging a.active').next(); //Move to the next paging
-					if ( $active.length === 0) { //If paging reaches the end...
-						$active = $('.paging a:first'); //go back to first
-					}
-					rotate(); //Trigger the paging and slider function
-				}, 7000); //Timer speed in milliseconds (7 seconds)
-			};
-			
-			rotateSwitch(); //Run function on launch
-			
-				//On Hover
-			$(".image_reel a").hover(function() {
-				clearInterval(play); //Stop the rotation
-			}, function() {
-				rotateSwitch(); //Resume rotation timer
-			});	
-			
-			//On Click
-			$(".paging a").click(function() {
-				$active = $(this); //Activate the clicked paging
-				//Reset Timer
-				clearInterval(play); //Stop the rotation
-				rotate(); //Trigger rotation immediately
-				rotateSwitch(); // Resume rotation timer
-				return false; //Prevent browser jump to link anchor
-			});	
-			
-						
-			});
-			
-						
-            </script> 
+                 
                   <span class="txt_title_blue ">Testimonials</span>
                   <div class="main_view">
                     <div class="window">
@@ -758,7 +689,6 @@
       </table></td>
   </tr>
 </table>
-<!--  Footer End --> 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script> 
 <script type="text/javascript" src="jquery.hoverIntent.minified.js"></script> 
 <script type="text/javascript">
@@ -827,8 +757,13 @@ function MM_preloadImages() { //v3.0
     if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
 }
 </script> 
+<script type="text/javascript">
+$(window).load(function() {
+    $('#slider').nivoSlider();
+});
+</script>
 <script type="text/javascript" src="slider_js/jquery.eislideshow.js"></script> 
-<!--  <script type="text/javascript" src="slider_/jquery.easing.1.3.js"></script> --> 
+  <script type="text/javascript" src="slider_/jquery.easing.1.3.js"></script> 
 <script type="text/javascript">
             $(function() {
                 $('#ei-slider').eislideshow({
@@ -840,7 +775,7 @@ function MM_preloadImages() { //v3.0
             });
         </script> 
 
-<!--<script src="js/jquery-1.6.2.js"></script>--> 
+<script src="js/jquery-1.6.2.js"></script>
 <script src="js/jquery.ui.core.js"></script> 
 <script src="js/jquery.ui.widget.js"></script> 
 <script src="js/jquery.ui.accordion.js"></script> 
@@ -852,6 +787,7 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
   window.open(theURL,winName,features);
 }
 </script> 
+
 <script type="text/javascript">
 $(window).load(function() {
     $('#slider').nivoSlider({
@@ -872,6 +808,5 @@ $(window).load(function() {
     });
 });
 </script> 
-
 </body>
 </html>
