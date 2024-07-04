@@ -31,6 +31,63 @@
   display: block;
 }
 
+/* wrapper */
+.slider-container {
+  width: 100%;
+  margin: auto; /* This centers the container horizontally */
+  max-width: 800px; /* Adjust max-width as needed */
+  text-align: center;
+}
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  overflow: hidden;
+}
+
+.slides {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.slides li {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbnails {
+  list-style-type: none;
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.thumbnails li {
+  display: inline-block;
+  margin-right: 5px; /* Adjust margin between thumbnails */
+}
+
+.thumbnails img {
+  width: 100px; /* Adjust thumbnail size as needed */
+  height: auto;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.thumbnails img:hover {
+  opacity: 1;
+}
 
 
 </style>
@@ -357,61 +414,56 @@
     <td ></td>
   </tr>
 </table>
-<div class="container">
-  <div class="wrapper">
-    <div id="ei-slider" class="ei-slider">
-      <ul class="ei-slider-large">
-        <li> 
-          <img src="slider_images/large/6.jpg" alt="image06"/>
-          <div class="ei-title">
-            <h3>AGS speaks about Technology that gives better ROI for your business</h3>
-          </div>
-        </li>
-        <li> 
-          <img src="slider_images/large/1.jpg" alt="image01" />
-          <div class="ei-title">
-            <h3>AGS have minds that can choose the best brains in the industry for your needs.</h3>
-          </div>
-        </li>
-        <li> 
-          <img src="slider_images/large/2.jpg" alt="image02" />
-          <div class="ei-title">
-            <h3>Strategic disposition, professionalism and commitment makes AGS the preferred IT partner of global players</h3>
-          </div>
-        </li>
-        <li> 
-          <img src="slider_images/large/3.jpg" alt="image03"/>
-          <div class="ei-title">
-            <h3>Wide range of products in different verticals makes AGS the unique IT Solutions Provider globally</h3>
-          </div>
-        </li>
-        <li> 
-          <img src="slider_images/large/4.jpg" alt="image04"/>
-          <div class="ei-title">
-            <h3>We create a career platform for our employees to nurture in a superior conducts</h3>
-          </div>
-        </li>
-        <li> 
-          <img src="slider_images/large/5.jpg" alt="image05"/>
-          <div class="ei-title">
-            <h3>Friendly customer relations to the best needs of our clients and job seekers.</h3>
-          </div>
-        </li>
-      </ul>
-      <ul class="ei-slider-thumbs">
-        <li class="ei-slider-element">Current</li>
-        <li><a href="#">Slide 6</a><img src="slider_images/thumbs/6.jpg" alt="thumb06" /></li>
-        <li><a href="#">Slide 1</a><img src="slider_images/thumbs/1.jpg" alt="thumb01" /></li>
-        <li><a href="#">Slide 2</a><img src="slider_images/thumbs/2.jpg" alt="thumb02" /></li>
-        <li><a href="#">Slide 3</a><img src="slider_images/thumbs/3.jpg" alt="thumb03" /></li>
-        <li><a href="#">Slide 4</a><img src="slider_images/thumbs/4.jpg" alt="thumb04" /></li>
-        <li><a href="#">Slide 5</a><img src="slider_images/thumbs/5.jpg" alt="thumb05" /></li>
-      </ul>
-    </div>
+<div class="container slider-container">
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="slider_images/large/6.jpg" alt="image06">
+        <div class="caption">
+          <h3>AGS speaks about Technology that gives better ROI for your business</h3>
+        </div>
+      </li>
+      <li>
+        <img src="slider_images/large/1.jpg" alt="image01">
+        <div class="caption">
+          <h3>AGS have minds that can choose the best brains in the industry for your needs.</h3>
+        </div>
+      </li>
+      <li>
+        <img src="slider_images/large/2.jpg" alt="image02">
+        <div class="caption">
+          <h3>Strategic disposition, professionalism and commitment makes AGS the preferred IT partner of global players</h3>
+        </div>
+      </li>
+      <li>
+        <img src="slider_images/large/3.jpg" alt="image03">
+        <div class="caption">
+          <h3>Wide range of products in different verticals makes AGS the unique IT Solutions Provider globally</h3>
+        </div>
+      </li>
+      <li>
+        <img src="slider_images/large/4.jpg" alt="image04">
+        <div class="caption">
+          <h3>We create a career platform for our employees to nurture in a superior conducts</h3>
+        </div>
+      </li>
+      <li>
+        <img src="slider_images/large/5.jpg" alt="image05">
+        <div class="caption">
+          <h3>Friendly customer relations to the best needs of our clients and job seekers.</h3>
+        </div>
+      </li>
+    </ul>
+    <ul class="thumbnails">
+      <li><img src="slider_images/thumbs/6.jpg" alt="thumb06"></li>
+      <li><img src="slider_images/thumbs/1.jpg" alt="thumb01"></li>
+      <li><img src="slider_images/thumbs/2.jpg" alt="thumb02"></li>
+      <li><img src="slider_images/thumbs/3.jpg" alt="thumb03"></li>
+      <li><img src="slider_images/thumbs/4.jpg" alt="thumb04"></li>
+      <li><img src="slider_images/thumbs/5.jpg" alt="thumb05"></li>
+    </ul>
   </div>
 </div>
-
-
 
 
 <div style="width:980px; height:20px; background:url(images/bg_bannershadow.png) no-repeat top center; margin:11px auto; border:solid 0px;"></div>
@@ -720,57 +772,36 @@
 <script type="text/javascript" src="jquery.hoverIntent.minified.js"></script> 
 
 <script>
-  $(document).ready(function() {
-    var currentSlide = 0;
-    var totalSlides = $('.ei-slider-large li').length;
+$(document).ready(function() {
+  // Configuration
+  var slideIndex = 0;
+  var slides = $(".slides li");
+  var thumbnails = $(".thumbnails img");
 
-    // Auto slide function
-    var autoSlide = setInterval(function() {
-      if (currentSlide < totalSlides - 1) {
-        currentSlide++;
-      } else {
-        currentSlide = 0;
-      }
-      slideTo(currentSlide);
-    }, 2000); // Change interval as needed (2000ms = 2 seconds)
+  // Initial state
+  showSlide(slideIndex);
 
-    // Function to navigate to specific slide
-    function slideTo(slideIndex) {
-      $('.ei-slider-large li').removeClass('active');
-      $('.ei-slider-large li').eq(slideIndex).addClass('active');
-      $('.ei-slider-thumbs li').removeClass('active');
-      $('.ei-slider-thumbs li').eq(slideIndex + 1).addClass('active'); // +1 to skip "Current" li
-
-      // Scroll thumbs if needed
-      var thumbPosition = $('.ei-slider-thumbs').scrollLeft();
-      var thumbWidth = $('.ei-slider-thumbs').width();
-      var thumbItemWidth = $('.ei-slider-thumbs li').outerWidth(true);
-      var thumbScrollOffset = (slideIndex + 1) * thumbItemWidth - thumbWidth / 2;
-
-      $('.ei-slider-thumbs').animate({
-        scrollLeft: thumbScrollOffset
-      }, 500); // Animation speed for thumb scrolling
-    }
-
-    // Thumbnail click handler
-    $('.ei-slider-thumbs li').click(function() {
-      var slideIndex = $(this).index() - 1;
-      clearInterval(autoSlide); // Stop auto sliding on manual click
-      slideTo(slideIndex);
-    });
-
-    // Reset auto slide on mouseleave
-    $('.ei-slider-thumbs').mouseleave(function() {
-      autoSlide = setInterval(function() {
-        if (currentSlide < totalSlides - 1) {
-          currentSlide++;
-        } else {
-          currentSlide = 0;
-        }
-        slideTo(currentSlide);
-      }, 2000); // Change interval as needed (2000ms = 2 seconds)
-    });
+  // Thumbnail click event
+  thumbnails.click(function() {
+    slideIndex = $(this).parent().index();
+    showSlide(slideIndex);
   });
+
+  // Automatic slide change every 2 seconds (optional)
+  setInterval(function() {
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlide(slideIndex);
+  }, 2000);
+
+  // Function to display slide by index
+  function showSlide(index) {
+    slides.hide();
+    slides.eq(index).fadeIn();
+    thumbnails.css("opacity", "0.7");
+    thumbnails.eq(index).css("opacity", "1");
+  }
+});
+
 </script>
 
 <!-- Include jQuery and jQuery UI libraries -->
