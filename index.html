@@ -12,7 +12,8 @@
 <link rel="stylesheet" type="text/css" href="slider_css/demo.css" />
 <link rel="stylesheet" type="text/css" href="slider_css/style.css" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Playfair+Display:400italic' rel='stylesheet' type='text/css' />
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://yourdomain.com/path/to/jquery.eislideshow.js"></script>
 <noscript>
 <link rel="stylesheet" type="text/css" href="slider_css/noscript.css" />
 </noscript>
@@ -802,26 +803,24 @@ $(document).ready(function() {
 
 <script  type="text/javascript" src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
 
-<script src="slider_js/jquery.eislideshow.js"></script>
+<script src="./slider_js/jquery.eislideshow.js"></script>
 <script>
-    $(document).ready(function() {
-        console.log("Document ready, jQuery version:", $.fn.jquery);
-        
-        // Check if jQuery and the plugin are loaded
-        if ($.fn.eislideshow) {
-            console.log("eislideshow plugin loaded");
-            
-            // Initialize the slideshow
-            $('#ei-slider').eislideshow({
-                animation: 'center',
-                autoplay: true,
-                slideshow_interval: 8000,
-                titlesFactor: 0
-            });
-        } else {
-            console.error("eislideshow plugin not loaded");
-        }
-    });
+$(document).ready(function() {
+    // Check if jQuery and the plugin are loaded
+    if ($.fn.eislideshow) {
+        console.log("eislideshow plugin loaded");
+
+        // Initialize the slideshow
+        $('#ei-slider').eislideshow({
+            animation: 'center',
+            autoplay: true,
+            slideshow_interval: 8000,
+            titlesFactor: 0
+        });
+    } else {
+        console.error("eislideshow plugin not loaded");
+    }
+});
 </script>
 
 
