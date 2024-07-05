@@ -63,7 +63,6 @@
       height: auto;
       display: block;
     }
-    /* Caption styles */
     .caption {
       background-color: rgba(0, 0, 0, 0.6);
       color: #ffffff;
@@ -93,7 +92,6 @@
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
-
     /* Apply animation to slider images */
     .slides img {
       animation: slideAnimation 10s infinite;
@@ -130,7 +128,6 @@
   </tr>
 </table>
 <!--Header End--> 
-
 <!--Body Start-->
 <table width="980" border="0" cellspacing="0" cellpadding="0" align="center" style=" border-collapse:collapse;" >
   <tr>
@@ -808,35 +805,33 @@ $(document).ready(function() {
 <script  type="text/javascript" src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.slider');
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const intervalTime = 2000; // Auto slide interval in milliseconds
-  let slideInterval;
+  document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const slides = Array.from(document.querySelectorAll('.slides li'));
+    const intervalTime = 5000; // Interval time between slides in milliseconds
+    let slideInterval;
 
-  // Function to move to next slide
-  function nextSlide() {
-    const currentSlide = document.querySelector('.slide.active');
-    let currentIndex = slides.indexOf(currentSlide);
-    let nextIndex = (currentIndex + 1) % slides.length;
+    // Function to move to next slide
+    function nextSlide() {
+      const currentSlide = document.querySelector('.slides .active');
+      let currentIndex = slides.indexOf(currentSlide);
+      let nextIndex = (currentIndex + 1) % slides.length;
 
-    // Move slider to next slide
-    slider.style.transform = `translateX(-${nextIndex * 100}%)`;
+      // Remove active class from current slide and add it to next slide
+      currentSlide.classList.remove('active');
+      slides[nextIndex].classList.add('active');
+    }
 
-    // Update active slide
-    currentSlide.classList.remove('active');
-    slides[nextIndex].classList.add('active');
-  }
+    // Set interval for auto slide
+    function startSlideInterval() {
+      slideInterval = setInterval(nextSlide, intervalTime);
+    }
 
-  // Set interval for auto slide
-  function startSlideInterval() {
-    slideInterval = setInterval(nextSlide, intervalTime);
-  }
-
-  // Start auto slide initially
-  startSlideInterval();
-});
+    // Start auto slide initially
+    startSlideInterval();
+  });
 </script>
+
 
 <script type="text/javascript">
 $(window).load(function() {
