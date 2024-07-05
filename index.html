@@ -804,16 +804,32 @@ $(document).ready(function() {
 <script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script  type="text/javascript" src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="slider_js/jquery.eislideshow.js"></script>
 <script>
-jQuery.noConflict();
-jQuery(document).ready(function($) {
-    $('#ei-slider').eislideshow({
-        animation: 'center',
-        autoplay: true,
-        slideshow_interval: 8000,
-        titlesFactor: 0
+    $(document).ready(function() {
+        console.log("Document ready, jQuery version:", $.fn.jquery);
+        
+        // Check if jQuery and the plugin are loaded
+        if ($.fn.eislideshow) {
+            console.log("eislideshow plugin loaded");
+            
+            // Initialize the slideshow
+            $('#ei-slider').eislideshow({
+                animation: 'center',
+                autoplay: true,
+                slideshow_interval: 8000,
+                titlesFactor: 0
+            });
+        } else {
+            console.error("eislideshow plugin not loaded");
+        }
     });
-});
+</script>
+
+
+<script>
+
 
 
   document.addEventListener('DOMContentLoaded', function() {
