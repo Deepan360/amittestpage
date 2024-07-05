@@ -818,66 +818,7 @@ $(document).ready(function() {
 <script  type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script  type="text/javascript" src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
 
-<script  type="text/javascript">
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.slider');
-  const slides = Array.from(document.querySelectorAll('.slide'));
-  const thumbs = Array.from(document.querySelectorAll('.thumb'));
-  const intervalTime = 2000; // Auto slide interval in milliseconds
-  let slideInterval;
 
-  // Function to move to next slide
-  function nextSlide() {
-    const currentSlide = document.querySelector('.slide.active');
-    let currentIndex = slides.indexOf(currentSlide);
-    let nextIndex = (currentIndex + 1) % slides.length;
-
-    // Move slider to next slide
-    slider.style.transform = `translateX(-${nextIndex * 100}%)`;
-
-    // Update active slide and thumb
-    currentSlide.classList.remove('active');
-    slides[nextIndex].classList.add('active');
-
-    // Update active thumbnail
-    thumbs.forEach(thumb => thumb.classList.remove('active'));
-    thumbs[nextIndex].classList.add('active');
-  }
-
-  // Set interval for auto slide
-  function startSlideInterval() {
-    slideInterval = setInterval(nextSlide, intervalTime);
-  }
-
-  // Event listener for clicking on thumbnails
-  thumbs.forEach(thumb => {
-    thumb.addEventListener('click', function() {
-      clearInterval(slideInterval); // Stop auto slide
-
-      const index = parseInt(thumb.getAttribute('data-slide-index'));
-
-      // Move slider to selected slide
-      slider.style.transform = `translateX(-${index * 100}%)`;
-
-      // Update active slide
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[index].classList.add('active');
-
-      // Update active thumbnail
-      thumbs.forEach(t => t.classList.remove('active'));
-      thumb.classList.add('active');
-
-      // Restart auto slide after 2 seconds
-      setTimeout(startSlideInterval, intervalTime);
-    });
-  });
-
-  // Start auto slide initially
-  startSlideInterval();
-});
-
-
-</script>
 
 
   <script type="text/javascript" src="slider_/jquery.easing.1.3.js"></script> 
@@ -896,6 +837,25 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
 }
 </script> 
 
-
+<script type="text/javascript">
+$(window).load(function() {
+    $('#slider').nivoSlider({
+        effect:'random',
+        slices:15,
+        animSpeed:500,
+        pauseTime:3000,		
+        directionNav:true, //Next & Prev
+        directionNavHide:true, //Only show on hover
+        controlNav:true, //1,2,3...
+        keyboardNav:true, //Use left & right arrows
+        pauseOnHover:true, //Stop animation while hovering
+        manualAdvance:false, //Force manual transitions
+        captionOpacity:0.8, //Universal caption opacity
+        beforeChange: function(){},
+        afterChange: function(){},
+        slideshowEnd: function(){} //Triggers after all slides have been shown
+    });
+});
+</script> 
 </body>
 </html>
